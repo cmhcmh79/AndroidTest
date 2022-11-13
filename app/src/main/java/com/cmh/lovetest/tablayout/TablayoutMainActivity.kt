@@ -33,10 +33,12 @@ class TablayoutMainActivity : AppCompatActivity() {
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             tab.text = tabTitleArray[position]
 
-            tab.icon = ContextCompat.getDrawable(this, tabIconArray[position])
-
+//            tab.icon = ContextCompat.getDrawable(this, tabIconArray[position])
         }.attach()
 
+        tabLayout.getTabAt(0)?.setIcon(R.drawable.ic_baseline_home_white_24)
+        tabLayout.getTabAt(1)?.setIcon(R.drawable.ic_baseline_favorite_24)
+        tabLayout.getTabAt(2)?.setIcon(R.drawable.ic_baseline_person_24)
 
 
     }
